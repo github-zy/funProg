@@ -131,3 +131,7 @@ def get_player_position(
     print(f"moved: {moved}, slowed: {slowed}, final: {final}")
     return final
 ```
+
+# 第八课
+
+FP和OOP最大的区别在于FP没有继承的概念，因为继承带来可变类，与FP相冲突。FP中依然可以利用封装、抽象、多态的概念。
