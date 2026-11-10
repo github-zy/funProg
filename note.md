@@ -102,3 +102,32 @@ def get_average(nums: list[int]) -> float:
 类将世界想象成分级对象的集合，对象通过将行为、数据和状态捆在一起彼此区分，就像棋盘上的棋子。
 
 函数将世界想象成数据的转变，就像棋盘的上一步变为下一步。
+
+# 第七课
+
+Debug FP：对于FP比如下面的语句
+
+```
+def get_player_position(
+    position: float, velocity: float, friction: float, gravity: float
+) -> float:
+    return calc_gravity(calc_friction(calc_move(position, velocity), friction), gravity)
+```
+
+一个debug的技巧就是将它们拆开
+
+```
+def get_player_position(
+    position: float, velocity: float, friction: float, gravity: float
+) -> float:
+    moved = calc_move(position, velocity)
+    slowed = calc_friction(moved, friction)
+    final = calc_gravity(slowed, gravity)
+    print("Given:")
+    print(
+        f"position: {position}, velocity: {velocity}, friction: {friction}, gravity: {gravity}"
+    )
+    print("Results:")
+    print(f"moved: {moved}, slowed: {slowed}, final: {final}")
+    return final
+```
