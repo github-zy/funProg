@@ -180,3 +180,13 @@ for n in [1, 2, 3, 4]:
     total += n
 ) * 4)
 ```
+# 第十课
+
+三目运算符(Ternary)
+
+语法如下：
+```
+value_a if condition else value_b
+```
+
+三目运算符将语句变为表达式，对于一些很复杂的条件逻辑，为了可读性，还是使用if/else语句比较好。
