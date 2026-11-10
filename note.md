@@ -59,4 +59,27 @@ button {
   color: red;
 }
 ```
+# 第五课
+
+FP就像数学一样，比如下面的数学语言
+
+```
+avg = Σx/N
+```
+
+如果是命令式编程
+```
+def get_average(nums: list[int]) -> float:
+    total = 0
+    for num in nums:
+        total += num
+    return total / len(nums)
+```
+
+如果是FP
+
+```
+def get_average(nums: list[int]) -> float:
+    return sum(nums) / len(nums)
+```
 
