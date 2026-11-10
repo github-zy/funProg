@@ -47,3 +47,16 @@ more_ages: tuple[int, ...] = (80,)
 all_ages: tuple[int, ...] = ages + more_ages
 # (16, 21, 30, 80)
 ```
+
+# 宣言式编程(Declarative Programing)
+
+FP的目标是告诉计算机想要什么结果，而不是命令计算机每一步该干嘛
+
+例如前端语言CSS就是宣言式编程
+
+```
+button {
+  color: red;
+}
+```
+
