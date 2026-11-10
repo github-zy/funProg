@@ -1,4 +1,4 @@
-## 第一课
+# 第一课
 
 命令式编程(imperative programming)和函数式编程(functional programming)
 
@@ -19,7 +19,6 @@ gas = get_gas(car_with_gas)
 print(gas)
 # 10
 ```
-
-##第二课
+# 第二课
 
 python并不是最适合函数式编程的语言，因为It doesn't enforce **static typing**, **immutability**, or **pure functions**, and it lacks **tail call optimization**.
