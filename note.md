@@ -1,4 +1,4 @@
-# 第一课
+# 第一章 第一课
 
 命令式编程(imperative programming)和函数式编程(functional programming)
 
@@ -19,11 +19,11 @@ gas = get_gas(car_with_gas)
 print(gas)
 # 10
 ```
-# 第二课
+# 第一章 第二课
 
 python并不是最适合函数式编程的语言，因为It doesn't enforce **static typing**, **immutability**, or **pure functions**, and it lacks **tail call optimization**.
 
-# 第三课
+# 第一章 第三课
 
 不变性(immutability)：FP偏好让数据不可变
 
@@ -48,7 +48,7 @@ all_ages: tuple[int, ...] = ages + more_ages
 # (16, 21, 30, 80)
 ```
 
-# 第四课
+# 第一章 第四课
 
 宣言式编程(Declarative Programing)：FP的目标是告诉计算机想要什么结果，而不是命令计算机每一步该干嘛
 
@@ -59,7 +59,7 @@ button {
   color: red;
 }
 ```
-# 第五课
+# 第一章 第五课
 
 FP就像数学一样，比如下面的数学语言
 
@@ -87,7 +87,7 @@ def get_average(nums: list[int]) -> float:
 1. 使用循环
 2. 修改任何变量（可以创造新的变量）
 
-# 第六课
+# 第一章 第六课
 
 类(Class)和函数(Function)
 
@@ -103,7 +103,7 @@ def get_average(nums: list[int]) -> float:
 
 函数将世界想象成数据的转变，就像棋盘的上一步变为下一步。
 
-# 第七课
+# 第一章 第七课
 
 Debug FP：对于FP比如下面的语句
 
@@ -132,11 +132,11 @@ def get_player_position(
     return final
 ```
 
-# 第八课
+# 第一章 第八课
 
 FP和OOP最大的区别在于FP没有继承的概念，因为继承带来可变类，与FP相冲突。FP中依然可以利用封装、抽象、多态的概念。
 
-# 第九课
+# 第一章 第九课
 
 语句(Statement)和表达式(Expression)
 
@@ -180,7 +180,7 @@ for n in [1, 2, 3, 4]:
     total += n
 ) * 4)
 ```
-# 第十课
+# 第一章 第十课
 
 三目运算符(Ternary)
 
@@ -190,3 +190,5 @@ value_a if condition else value_b
 ```
 
 三目运算符将语句变为表达式，对于一些很复杂的条件逻辑，为了可读性，还是使用if/else语句比较好。
+
+# 第二章 第一课
