@@ -135,3 +135,48 @@ def get_player_position(
 # 第八课
 
 FP和OOP最大的区别在于FP没有继承的概念，因为继承带来可变类，与FP相冲突。FP中依然可以利用封装、抽象、多态的概念。
+
+# 第九课
+
+语句(Statement)和表达式(Expression)
+
+语句就是被执行的动作，比如
+```
+n: int = 7  # Variable assignment statement
+
+
+def greet(name: str) -> str:  # Function definition statement
+    return f"Hello, {name}!"
+
+
+if x > 10:  # `if` statement
+    print(greet("Alice"))
+
+for i in range(n):  # `for` loop statement
+    print(i)
+```
+
+表达式是语句的子集，用来求值，例如
+```
+result: int = 2 + 2  # Arithmetic expression
+length: int = len("hello")  # Function call expression
+total_cost: float = len(items) * cost  # Multiple expressions combined into one
+```
+
+对于大多数语言（包括Python）来说，函数调用是一种表达式。
+
+FP鼓励使用表达式，因为所有表达式可以组合计算，例如
+
+```
+print(sum([1, 2, 3, 4]) * 2)  # 20
+```
+
+而一些语句无法组合计算，例如
+```
+# This doesn't work!
+print((
+total = 0
+for n in [1, 2, 3, 4]:
+    total += n
+) * 4)
+```
