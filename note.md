@@ -82,4 +82,7 @@ def get_average(nums: list[int]) -> float:
 def get_average(nums: list[int]) -> float:
     return sum(nums) / len(nums)
 ```
+作为一个优秀的FP程序员，代码应该禁止：
 
+1. 使用循环
+2. 修改任何变量（可以创造新的变量）
