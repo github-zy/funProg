@@ -22,3 +22,28 @@ print(gas)
 # 第二课
 
 python并不是最适合函数式编程的语言，因为It doesn't enforce **static typing**, **immutability**, or **pure functions**, and it lacks **tail call optimization**.
+
+# 第三课
+
+不变性(immutability)：FP偏好让数据不可变
+
+元组(Tuples)和列表(Lists)：元组和列表都是有序集合，但是元组是不可变的
+
+列表可变
+
+```
+ages: list[int] = [16, 21, 30]
+ages.append(80)
+# [16, 21, 30, 80]
+```
+
+元组不可变
+
+```
+ages: tuple[int, ...] = (16, 21, 30)
+# (16, 21, 30)
+more_ages: tuple[int, ...] = (80,)
+# (80,)
+all_ages: tuple[int, ...] = ages + more_ages
+# (16, 21, 30, 80)
+```
