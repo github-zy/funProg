@@ -19,3 +19,7 @@ gas = get_gas(car_with_gas)
 print(gas)
 # 10
 ```
+
+##第二课
+
+python并不是最适合函数式编程的语言，因为It doesn't enforce **static typing**, **immutability**, or **pure functions**, and it lacks **tail call optimization**.
