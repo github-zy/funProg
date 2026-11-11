@@ -226,3 +226,12 @@ get_age: Callable[[str], int | str] = lambda name: {
 print(get_age("lane"))
 # 29
 ```
+
+# 第二章 第三课
+
+如果一种编程语言的函数可以被传递给参数、可以被函数返回、且可以被赋值给变量，那么就说这种编程语言支持第一类函数(First-class functions)
+
+1. 第一类函数：被当作值来看待的函数
+2. 高阶函数：接收函数参数或返回函数的函数
+   
+
