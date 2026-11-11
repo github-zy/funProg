@@ -234,4 +234,25 @@ print(get_age("lane"))
 1. 第一类函数：被当作值来看待的函数
 2. 高阶函数：接收函数参数或返回函数的函数
    
+# 第二章 第四课
+
+map在FP中是一种常被使用的高阶函数。
+
+在Python中，内置map函数接收一个函数和可迭代对象(iterable)（通常是list）将函数应用在可迭代对象上然后返回另一个一个可迭代对象（iterator）
+
+使用map可以避免使用循环和状态变量
+```
+from collections.abc import Iterator
+
+
+def square(x: int) -> int:
+    return x * x
+
+
+nums: list[int] = [1, 2, 3, 4, 5]
+squared_nums: Iterator[int] = map(square, nums)
+
+print(list(squared_nums))
+# [1, 4, 9, 16, 25]
+```
 
