@@ -255,4 +255,17 @@ squared_nums: Iterator[int] = map(square, nums)
 print(list(squared_nums))
 # [1, 4, 9, 16, 25]
 ```
+# 第二章 第五课
+
+内置filter函数接受一个函数和一个可迭代对象（通常是list），将函数应用在个体上若函数返回值为真，则保留，最后返回保留的个体组成的可迭代对象。
+```
+def is_even(x: int) -> bool:
+    return x % 2 == 0
+
+
+numbers: list[int] = [1, 2, 3, 4, 5, 6]
+evens: list[int] = list(filter(is_even, numbers))
+print(evens)
+# [2, 4, 6]
+```
 
