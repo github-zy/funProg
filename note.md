@@ -326,3 +326,8 @@ def find_max(nums: list[int]) -> None:
         if global_max < num:
             global_max = num
 ```
+
+# 第三章 第二课
+
+纯函数不会执行任何I/O操作（比如说读文件，访问网络，或者写控制台）
+
