@@ -192,3 +192,20 @@ value_a if condition else value_b
 三目运算符将语句变为表达式，对于一些很复杂的条件逻辑，为了可读性，还是使用if/else语句比较好。
 
 # 第二章 第一课
+
+在Python中，函数就是值，可以将函数赋给一个变量，例如
+```
+from collections.abc import Callable
+
+
+def add(x: int, y: int) -> int:
+    return x + y
+
+
+# assign the function to a new variable
+# called `addition`. It behaves the same
+# as the original `add` function
+addition: Callable[[int, int], int] = add
+print(addition(2, 5))
+# 7
+```
