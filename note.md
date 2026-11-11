@@ -297,3 +297,32 @@ c: list[tuple[int, int]] = list(zip(a, b))
 print(c)
 # [(1, 4), (2, 5), (3, 6)]
 ```
+# 第三章 第一课
+
+纯函数(pure function)有两个性质：
+
+1. 给定相同的参数它们总是返回相同的值
+2. 运行它们不会造成任何副作用
+
+纯函数
+```
+def find_max(nums: list[int]) -> float:
+    max_val: float = float("-inf")
+    for num in nums:
+        if max_val < num:
+            max_val = num
+    return max_val
+```
+非纯函数
+```
+# instead of returning a value
+# this function modifies a global variable
+global_max: float = float("-inf")
+
+
+def find_max(nums: list[int]) -> None:
+    global global_max
+    for num in nums:
+        if global_max < num:
+            global_max = num
+```
