@@ -268,4 +268,20 @@ evens: list[int] = list(filter(is_even, numbers))
 print(evens)
 # [2, 4, 6]
 ```
+# 第二章 第六课
 
+functools.reduce()接受一个函数和一个值的列表，然后依次计算，例子如下
+```
+# import functools from the standard library
+import functools
+
+
+def add(sum_so_far: int, x: int) -> int:
+    return sum_so_far + x
+
+
+numbers: list[int] = [1, 2, 3, 4]
+total: int = functools.reduce(add, numbers)
+print(total)
+# 10
+```
