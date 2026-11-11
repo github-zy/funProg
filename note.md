@@ -285,3 +285,15 @@ total: int = functools.reduce(add, numbers)
 print(total)
 # 10
 ```
+
+# 第二章 第七课
+
+zip函数接受两个可迭代对象（通常是list），然后返回一个新的可迭代对象（一个元组的列表），见例子
+```
+a: list[int] = [1, 2, 3]
+b: list[int] = [4, 5, 6]
+
+c: list[tuple[int, int]] = list(zip(a, b))
+print(c)
+# [(1, 4), (2, 5), (3, 6)]
+```
