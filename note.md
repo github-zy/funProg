@@ -209,3 +209,20 @@ addition: Callable[[int, int], int] = add
 print(addition(2, 5))
 # 7
 ```
+
+# 第二章 第二课
+
+匿名函数就是没有名字的函数。在Python中，匿名函数被称作lambda函数，例如
+```
+lambda x: x + 1
+```
+lambda函数可以被赋值给变量，常用来代替小型的、简单的算式
+```
+get_age: Callable[[str], int | str] = lambda name: {
+    "lane": 29,
+    "hunter": 69,
+    "allan": 17,
+}.get(name, "not found")
+print(get_age("lane"))
+# 29
+```
