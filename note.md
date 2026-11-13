@@ -489,3 +489,8 @@ harry_potter_aggregator("Privet")
 print(harry_potter_aggregator("Drive"))
 # Mr. and Mrs. Dursley of number four, Privet Drive
 ```
+# 第六章 第二课
+
+closure的重点就是它是有状态的，即一个函数”记得住“一些在函数外部定义的值。
+
+closure显然不是一个纯函数
