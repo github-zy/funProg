@@ -442,3 +442,9 @@ print(square_func(5))
 print(double_func(5))
 # prints 10
 ```
+
+# 第五章 第四课
+
+当函数变换可以增加代码的复用性时就建议使用
+
+当需要创造一个closure时考虑函数变换
