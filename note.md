@@ -404,3 +404,41 @@ def find_max(nums: list[int]) -> None:
 1. 栈溢出
 2. 死循环
 3. 程序运行速度缓慢
+   
+# 第五章 第一课
+
+函数变换(Function transformation)指的是一种特定的高阶函数
+
+它接受函数作为参数返回函数
+
+```
+from collections.abc import Callable
+
+
+def multiply(x: int, y: int) -> int:
+    return x * y
+
+
+def add(x: int, y: int) -> int:
+    return x + y
+
+
+# self_math is a higher-order function
+# input: a function that takes two arguments and returns a value
+# output: a new function that takes one argument and returns a value
+def self_math(math_func: Callable[[int, int], int]) -> Callable[[int], int]:
+    def inner_func(x: int) -> int:
+        return math_func(x, x)
+
+    return inner_func
+
+
+square_func: Callable[[int], int] = self_math(multiply)
+double_func: Callable[[int], int] = self_math(add)
+
+print(square_func(5))
+# prints 25
+
+print(double_func(5))
+# prints 10
+```
