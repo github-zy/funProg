@@ -448,3 +448,44 @@ print(double_func(5))
 当函数变换可以增加代码的复用性时就建议使用
 
 当需要创造一个closure时考虑函数变换
+
+# 第六章 第一课
+
+闭包(closure)是一个从自身外界引用变量的函数，他和他的环境被捆在单一实体里面
+
+简单来说，closure就是一个一直跟踪某些存在于他自身被定义的地方的某些值的函数
+
+```
+from collections.abc import Callable
+
+
+def concatter() -> Callable[[str], str]:
+    doc: str = ""
+
+    def doc_builder(word: str) -> str:
+        # "nonlocal" tells Python to use the 'doc'
+        # variable from the enclosing scope
+        nonlocal doc
+        if doc:
+            doc += " "
+        doc += word
+        return doc
+
+    return doc_builder
+
+
+# save the returned 'doc_builder' function
+# to the new function 'harry_potter_aggregator'
+harry_potter_aggregator: Callable[[str], str] = concatter()
+harry_potter_aggregator("Mr.")
+harry_potter_aggregator("and")
+harry_potter_aggregator("Mrs.")
+harry_potter_aggregator("Dursley")
+harry_potter_aggregator("of")
+harry_potter_aggregator("number")
+harry_potter_aggregator("four,")
+harry_potter_aggregator("Privet")
+
+print(harry_potter_aggregator("Drive"))
+# Mr. and Mrs. Dursley of number four, Privet Drive
+```
