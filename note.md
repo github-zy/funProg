@@ -494,3 +494,28 @@ print(harry_potter_aggregator("Drive"))
 closure的重点就是它是有状态的，即一个函数”记得住“一些在函数外部定义的值。
 
 closure显然不是一个纯函数
+
+# 第七章 第一课
+
+function currying（柯里化）是一种特定的函数变换，将一个接受多个参数的函数转变为多个一串接受单个参数的函数。
+
+```
+from collections.abc import Callable
+
+
+def sum(a: int) -> Callable[[int], int]:
+    def inner_sum(b: int) -> int:
+        return a + b
+
+    return inner_sum
+
+
+print(sum(1)(2))
+# prints 3
+```
+
+# 第七章 第二课
+
+为什么需要柯里化？
+
+可以改变函数的签名，比如若一个函数调用的参数指定为一个参数的函数，可以将多个参数的函数柯里化
